@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology | Aadarsh Agarwal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="essay-styles.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Methodology behind tracking thought evolution and AI modeling">
+    <meta name="author" content="Aadarsh Agarwal">
+</head>
+<body>
+    <div class="site-container">
+        <main class="main-content">
+            <h1>Methodology</h1>
+            
+            <h2>Tracking Thought Evolution</h2>
+            <p>This project represents my attempt to document how my thinking evolves over time. By tracking changes to my essays and documenting the reasoning behind those changes, I aim to create a dataset that can reveal patterns in my cognitive evolution and potentially serve as training data for an AI model.</p>
+            
+            <h3>The Process</h3>
+            <ol>
+                <li><strong>Version Control</strong>: Each essay is saved in multiple versions as it evolves, with a clear versioning system.</li>
+                <li><strong>Change Documentation</strong>: For each revision, I document:
+                    <ul>
+                        <li>What changed in the content</li>
+                        <li>Why my thinking changed (influences, new information, conversations, etc.)</li>
+                        <li>Patterns in how my perspective evolved</li>
+                    </ul>
+                </li>
+                <li><strong>Metadata Structure</strong>: Each essay has an associated metadata.json file that structures this information in a machine-readable format.</li>
+                <li><strong>Visual Diff Representation</strong>: Changes between versions are visually represented to highlight evolution.</li>
+            </ol>
+            
+            <h3>File Structure</h3>
+            <pre style="background-color: #f5f5f5; padding: 1rem; overflow-x: auto;">
+/essays/
+  /[essay-name]/
+    index.html      # Current version (redirects to latest)
+    v1.html         # Version 1
+    v2.html         # Version 2
+    v3.html         # Version 3
+    metadata.json   # Structured data about versions and changes
+    </pre>
+            
+            <h3>Metadata Schema</h3>
+            <p>Each essay's metadata is structured according to this JSON schema:</p>
+            <pre style="background-color: #f5f5f5; padding: 1rem; overflow-x: auto;">
+{
+  "title": "Essay Title",
+  "versions": [
+    {
+      "version": 1,
+      "date": "YYYY-MM-DD",
+      "file": "v1.html",
+      "summary": "Brief description of this version"
+    },
+    {
+      "version": 2,
+      "date": "YYYY-MM-DD",
+      "file": "v2.html",
+      "summary": "Brief description of this version",
+      "reasoning": "Detailed explanation of why my thinking changed"
+    }
+  ],
+  "tags": ["topic1", "topic2"],
+  "related_concepts": ["concept1", "concept2"],
+  "change_patterns": {
+    "v1_to_v2": {
+      "added_concepts": [],
+      "refined_arguments": [],
+      "changed_perspective": ""
+    }
+  },
+  "thought_evolution": {
+    "initial_bias": "",
+    "evolution_path": "",
+    "key_influences": []
+  }
+}
+            </pre>
+            
+            <h2>AI Modeling Approach</h2>
+            <p>The long-term goal of this project is to potentially create a fine-tuned language model that could simulate my thought processes. This represents an experiment in what I call "cognitive versioning" — treating my evolving thoughts as a dataset worthy of analysis and modeling.</p>
+            
+            <h3>Steps Toward AI Modeling</h3>
+            <ol>
+                <li><strong>Data Collection</strong>: Gathering essay versions and change reasonings over time</li>
+                <li><strong>Pattern Extraction</strong>: Identifying recurring patterns in how my thinking evolves</li>
+                <li><strong>Feature Engineering</strong>: Converting the patterns into features that can be processed by ML models</li>
+                <li><strong>Model Selection</strong>: Identifying appropriate base models for fine-tuning</li>
+                <li><strong>Fine-Tuning</strong>: Training the model on my dataset of thought evolution</li>
+                <li><strong>Evaluation</strong>: Testing whether the model can accurately predict how I would evolve my thinking on new topics</li>
+            </ol>
+            
+            <h3>Technical Implementation</h3>
+            <p>The current implementation uses the following technologies:</p>
+            <ul>
+                <li><strong>Frontend</strong>: HTML, CSS, JavaScript for visualization and interaction</li>
+                <li><strong>Data Storage</strong>: JSON files for structured metadata</li>
+                <li><strong>Text Diffing</strong>: Custom diffing algorithm to visualize changes between versions</li>
+                <li><strong>Visualization</strong>: D3.js for concept network visualizations (planned)</li>
+            </ul>
+            
+            <h3>Future Plans</h3>
+            <p>In the future, I plan to:</p>
+            <ul>
+                <li>Implement more sophisticated version diffing with semantic understanding</li>
+                <li>Create a more comprehensive pattern recognition system</li>
+                <li>Explore integration with large language models for fine-tuning</li>
+                <li>Develop a public API that allows interaction with my thought model</li>
+                <li>Build tools for automatically extracting insights from my thought evolution patterns</li>
+            </ul>
+            
+            <h2>Philosophical Implications</h2>
+            <p>This project raises interesting philosophical questions:</p>
+            <ul>
+                <li>To what extent can a person's thought processes be captured and modeled?</li>
+                <li>What does it mean to create a "digital twin" of one's cognitive evolution?</li>
+                <li>Could such models help us understand biases in our own thinking?</li>
+                <li>Might they serve as a kind of cognitive legacy or inheritance?</li>
+            </ul>
+            
+            <p>I'm as interested in these philosophical questions as I am in the technical implementation. This project represents an experiment at the intersection of personal knowledge management, version control, and artificial intelligence.</p>
+        </main>
+
+        <nav class="nav">
+            <div class="nav-section">
+                <h3>Essays</h3>
+                <a href="/essays/mandate-of-heaven.html">Mandate of Heaven</a>
+                <a href="/essays/liberal-arts.html">Liberal Arts Education</a>
+                <a href="/essays/future.html">What the Future Could Look Like</a>
+                <a href="/essays/bell-labs-darpa.html">Bell Labs x DARPA</a>
+                <a href="/essays/mandate-knowledge.html">Mandate of Knowledge</a>
+                <a href="/essays/poker.html">Poker</a>
+                <a href="/essays/ship-of-theseus.html">Ship of Theseus</a>
+                <a href="/essays/how-to-philosophy.html">How to do Philosophy</a>
+                <a href="/essays/next-facebook.html">Who is going to build the Next Facebook?</a>
+                <a href="/essays/great-people.html">Great People</a>
+            </div>
+            
+            <div class="nav-section">
+                <h3>Thought Evolution</h3>
+                <a href="/thought-model.html">My Thinking Model</a>
+                <a href="/evolution-stats.html">Evolution Statistics</a>
+                <a href="/methodology.html">Methodology</a>
+            </div>
+            
+            <div class="nav-section">
+                <h3>Menu 3</h3>
+                <a href="#">Item 1</a>
+                <a href="#">Item 2</a>
+                <a href="#">Item 3</a>
+            </div>
+        </nav>
+    </div>
+</body>
+</html> 
